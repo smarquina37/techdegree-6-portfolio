@@ -6,7 +6,7 @@ const { projects } = data;
 
 router.get("/:id", (req, res) => {
   res.render("project", {
-    projects: data.projects[req.params.id],
+    projects: projects[req.params.id],
   });
 });
 
