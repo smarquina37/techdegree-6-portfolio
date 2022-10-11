@@ -1,7 +1,10 @@
 const express = require("express");
-// const projectData = require("/data.json");
+const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
+
+//Initializes Middleware
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //Set the absolute path in the express.static function
 app.use("/static", express.static("public"));
@@ -9,15 +12,28 @@ app.use("/static", express.static("public"));
 //Set the view engine property to pug
 app.set("view engine", "pug");
 
-//Set routes
-// const homeRoute = require("/");
-// const aboutRoute = require("/about");
-app.get("/", (req, res) => {
-  res.render("index");
+// Set routes
+const mainRoutes = require("./routes");
+const aboutRoutes = require("./routes/about");
+const projectRoutes = require("./routes/projects");
+
+app.use(mainRoutes);
+app.use(aboutRoutes);
+app.use("/projects", projectRoutes);
+
+/* Error Handlers */
+/* 404 handler to catch undefined or non-existent route requests */
+app.use((req, res, next) => {
+  const err = new Error("Oops! This site was not found");
+  err.status = 404;
+  next(err);
 });
 
-app.get("/about", (req, res) => {
-  res.render("about");
+/* Global error handler */
+app.use((err, req, res, next) => {
+  res.locals.error = err;
+  res.status(err.status);
+  res.render("error");
 });
 
 //app.listen() is the function that starts a port and host, in our case the
