@@ -31,10 +31,22 @@ app.use((req, res, next) => {
 
 /* Global error handler */
 app.use((err, req, res, next) => {
-  res.locals.error = err;
-  res.status(err.status);
-  res.render("error");
+  if (err) {
+    console.log("Global Error called", err);
+    if (err.status === 404) {
+      res.status(404).render("error", { error: err });
+    } else {
+      err.message =
+        err.message || `Oops looks like something went wrong with the server.`;
+      res.status(err.status || 500).render("error", { err });
+    }
+  }
 });
+
+// if (err) {
+//   console.log("Global error", err);
+
+//
 
 //app.listen() is the function that starts a port and host, in our case the
 //localhost for the connections to listen to incoming requests from a client.
