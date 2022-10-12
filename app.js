@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
 const path = require("path");
-const data = require("./data.json");
+const { projects } = require("./data.json");
 
 //Initializes Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,8 +24,12 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 
-app.get("/projects/:id", (req, res) => {
-  res.render("project", { projects: data.projects });
+app.get("/projects/:id", (req, res, next) => {
+  if (projects[req.params.id]) {
+    res.render("project", { project: projects[req.params.id] });
+  } else {
+    next();
+  }
 });
 
 /* Error Handlers */
@@ -49,11 +53,6 @@ app.use((err, req, res, next) => {
     }
   }
 });
-
-// if (err) {
-//   console.log("Global error", err);
-
-//
 
 //app.listen() is the function that starts a port and host, in our case the
 //localhost for the connections to listen to incoming requests from a client.
