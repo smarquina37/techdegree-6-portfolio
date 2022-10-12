@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const port = 3000;
+const path = require("path");
+const data = require("./data.json");
 
 //Initializes Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -11,15 +13,20 @@ app.use("/static", express.static("public"));
 
 //Set the view engine property to pug
 app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
 
 // Set routes
-const mainRoutes = require("./routes");
-const aboutRoutes = require("./routes/about");
-const projectRoutes = require("./routes/projects");
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
-app.use(mainRoutes);
-app.use(aboutRoutes);
-app.use("/projects", projectRoutes);
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+
+app.get("/projects/:id", (req, res) => {
+  res.render("project", { projects: data.projects });
+});
 
 /* Error Handlers */
 /* 404 handler to catch undefined or non-existent route requests */
