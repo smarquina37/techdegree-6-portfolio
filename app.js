@@ -40,7 +40,7 @@ app.get("/projects/:id", (req, res, next) => {
 /* 404 handler to catch undefined or non-existent route requests */
 app.use((req, res, next) => {
   const err = new Error();
-  err.status = 500;
+  err.status = 404;
   next(err);
 });
 
