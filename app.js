@@ -39,8 +39,8 @@ app.get("/projects/:id", (req, res, next) => {
 /* Error Handlers */
 /* 404 handler to catch undefined or non-existent route requests */
 app.use((req, res, next) => {
-  const err = new Error("Oops! This site was not found");
-  err.status = 404;
+  const err = new Error();
+  err.status = 500;
   next(err);
 });
 
@@ -49,8 +49,9 @@ app.use((err, req, res, next) => {
   if (err) {
     console.log("Global Error called", err);
   }
+
   if (err.status === 404) {
-    res.status(404).render("error", { error: err });
+    res.status(404).render("page-not-found", { err });
   } else {
     err.message =
       err.message || `Oops looks like something went wrong with the server.`;

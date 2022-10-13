@@ -1,8 +1,11 @@
 extends layout
 
 block content
-    h1= `Server Error - Error status code: ${error.status}`
-    h2=`${error.message}`
-    .paper
-      pre.stack-trace= error.stack
-    .tear
+  h1= `Server Error`
+  h2= `Error status code: ${err.status} - Server Error`
+  p.error-p= `${err.message}`
+
+  a.home(href=`/`) Home
+
+  div.not-found-stack
+    pre #{err.stack}

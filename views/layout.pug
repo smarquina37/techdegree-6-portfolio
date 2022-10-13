@@ -14,17 +14,13 @@ html(lang="en" dir="ltr")
       .sidebar-info-box
         br
         .thumbnail-box
-          img.thumbnail(src='static/images/selfie.png', alt='')
+          img.thumbnail(src='/static/images/selfie.png', alt='Photo of Susana')
         .dev-intro-box
 
-          //- Replace with your name
           h5 Susana Marquina
-
-          //- Replace with description of who you are, what you do, and why you are so awesome
-          p Hello! I'm a full-stack developer living in Los Angeles, CA. I love the creativity and possibilities that comes with programming! I want to use my skills to build accessible, inclusive products that positively impact people's lives. 
+          p Welcome! I'm a full-stack developer living in Los Angeles, CA. I love the creativity and possibilities that comes with programming and am excited to share my skills with you! 
           p I also enjoy exercise and fitness, listening to 90's music, and long naps on the beach.  
 
-          //- Add path from your '/about' route handler to the href below
           a(href='/about') Learn More &rarr;
 
     .wrapper
@@ -32,9 +28,10 @@ html(lang="en" dir="ltr")
         .header-info-box
           button#menu-icon.menu-icon(type='button' data-toggle='my-info')
 
-          //- Replace with your name — this is for the mobile layout
           span Susana Marquina
 
       block content
 
   script(src='/static/js/script.js')
+
+  
