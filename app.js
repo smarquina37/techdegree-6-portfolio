@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //Set the absolute path in the express.static function
 app.use("/static", express.static("public"));
+app.use("/images", express.static("images"));
 
 //Set the view engine property to pug
 app.set("view engine", "pug");
@@ -17,7 +18,7 @@ app.set("views", path.join(__dirname, "views"));
 
 // Set routes
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", { projects });
 });
 
 app.get("/about", (req, res) => {
@@ -25,8 +26,11 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/projects/:id", (req, res, next) => {
-  if (projects[req.params.id]) {
-    res.render("project", { project: projects[req.params.id] });
+  const projectId = req.params.id;
+  const project = projects.find(({ id }) => id === +projectId);
+
+  if (project) {
+    res.render("project", { project });
   } else {
     next();
   }

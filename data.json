@@ -7,7 +7,7 @@
       "technologies": ["HTML", "CSS", "JavaScript"],
       "live_link": "https://smarquina37.github.io/techdegree-1-random-quote-generator/",
       "github_link": "https://github.com/smarquina37/techdegree-1-random-quote-generator.git",
-      "image_urls": ["/images/photo-one.jpg", "/images/project-one-quote.jpg"]
+      "image_urls": ["/static/images/unit-one.jpg"]
     },
     {
       "id": 2,
@@ -16,10 +16,7 @@
       "technologies": ["HTML", "CSS", "JavaScript"],
       "live_link": "https://smarquina37.github.io/techdegree-2-student-page-gallery/",
       "github_link": "https://github.com/smarquina37/techdegree-2-student-page-gallery.git",
-      "image_urls": [
-        "/images/photo-two.jpg",
-        "/images/project-two-students.jpg"
-      ]
+      "image_urls": ["/static/images/unit-two.png"]
     },
     {
       "id": 3,
@@ -28,10 +25,7 @@
       "technologies": ["HTML", "CSS", "JavaScript"],
       "live_link": "https://smarquina37.github.io/techdegree-3-interactive-form/",
       "github_link": "https://github.com/smarquina37/techdegree-3-interactive-form.git",
-      "image_urls": [
-        "/images/photo-three.jpg",
-        "/images/project-three-registration.jpg"
-      ]
+      "image_urls": ["/static/images/unit-three.png"]
     },
     {
       "id": 4,
@@ -40,7 +34,7 @@
       "technologies": ["HTML", "CSS", "JavaScript"],
       "live_link": "https://smarquina37.github.io/techdegree-4-phrase-game/",
       "github_link": "https://github.com/smarquina37/techdegree-4-phrase-game.git",
-      "image_urls": ["/images/photo-four.jpg", "/images/project-four-game.jpg"]
+      "image_urls": ["/static/images/unit-four.png"]
     },
     {
       "id": 5,
@@ -49,10 +43,7 @@
       "technologies": ["HTML", "CSS", "JavaScript"],
       "live_link": "https://smarquina37.github.io/techdegree-5-employee-directory/",
       "github_link": "https://github.com/smarquina37/techdegree-5-employee-directory.git",
-      "image_urls": [
-        "/images/photo-five.jpg",
-        "/images/project-five-employee.jpg"
-      ]
+      "image_urls": ["/static/images/unit-five.png"]
     }
   ]
 }
