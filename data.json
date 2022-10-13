@@ -3,7 +3,7 @@
     {
       "id": 1,
       "project_name": "Random Quote Generator",
-      "description": "This app displays a random famous quote each time a button is clicked.",
+      "description": "This app displays a random famous quote each time a button is clicked. By using basic JavaScript syntax, variables, loops, conditionals and object literals to build the array of quote objects to store the quotes and write my own functions for selecting random quotes from the array and printing them to the screen.",
       "technologies": ["HTML", "CSS", "JavaScript"],
       "live_link": "https://smarquina37.github.io/techdegree-1-random-quote-generator/",
       "github_link": "https://github.com/smarquina37/techdegree-1-random-quote-generator.git",
@@ -21,7 +21,7 @@
     {
       "id": 3,
       "project_name": "Registration Form",
-      "description": "In this app, I used JavaScript to create a more user-friendly registration form for a tech conference.",
+      "description": "In this app, I used JavaScript to create a registration form for a tech conference. Using the supplied HTML and CSS files, I added my own JavaScript to make the form more user-friendly by 1.) Adding customized and conditional behavior and interactivity and 2.) Validating user input and providing helpful error messages when the user enters invalid information into the form fields.",
       "technologies": ["HTML", "CSS", "JavaScript"],
       "live_link": "https://smarquina37.github.io/techdegree-3-interactive-form/",
       "github_link": "https://github.com/smarquina37/techdegree-3-interactive-form.git",
@@ -30,7 +30,7 @@
     {
       "id": 4,
       "project_name": "Phrase Game",
-      "description": "This app is a browser-based, word guessing game called 'Phrase Hunter.' I useed JavaScript and OOP (Object-Oriented Programming) to select a random, hidden phrase, which a player tries to guess, by clicking letters on an onscreen keyboard.",
+      "description": "This app is a browser-based, word guessing game called 'Phrase Hunter.' I used JavaScript and OOP (Object-Oriented Programming) to select a random, hidden phrase, which a player tries to guess, by clicking letters on an onscreen keyboard.",
       "technologies": ["HTML", "CSS", "JavaScript"],
       "live_link": "https://smarquina37.github.io/techdegree-4-phrase-game/",
       "github_link": "https://github.com/smarquina37/techdegree-4-phrase-game.git",
@@ -39,7 +39,7 @@
     {
       "id": 5,
       "project_name": "Employee Directory",
-      "description": "This app is a browser-based, word guessing game called 'Phrase Hunter.' I useed JavaScript and OOP (Object-Oriented Programming) to select a random, hidden phrase, which a player tries to guess, by clicking letters on an onscreen keyboard.",
+      "description": "For this project, I built an employee directory for a fictional company called Awesome Startup. I requested a JSON object from an API and parsed the data so that 12 employees are listed in a grid with their thumbnail image, full name, email, and location. Clicking the employee’s image or name will open a modal window with more detailed information, such as the employee’s birthday and address.",
       "technologies": ["HTML", "CSS", "JavaScript"],
       "live_link": "https://smarquina37.github.io/techdegree-5-employee-directory/",
       "github_link": "https://github.com/smarquina37/techdegree-5-employee-directory.git",
