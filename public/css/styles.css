@@ -19,15 +19,16 @@ body {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
-  color: #0a0a0a;
-  background: #fefefe;
-  background: #000;
+  color: #28282b;
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  background-color: #e9defa;
+  background-repeat: no-repeat;
   transform: translateX(0px);
   transition: all 0.4s ease-out;
 }
 
 article {
-  background: #fefefe;
+  background: #fefaf6;
 }
 
 h1,
@@ -55,7 +56,7 @@ h6 {
 
 p {
   font-size: 15px;
-  color: rgb(56, 56, 56);
+  color: #28282b;
 }
 
 a {
@@ -67,7 +68,7 @@ a {
   min-width: 320px;
   height: 100%;
   min-height: 100%;
-  background: #fefefe;
+  background: #fefaf6;
 }
 
 .flex-row-wrap {
@@ -86,7 +87,7 @@ a {
   width: 100%;
   max-width: 1200px;
   padding: 40px 50px 30px;
-  background: #fefefe;
+  background: #fefaf6;
   border-bottom: 1px solid #eaeaea;
 }
 
@@ -122,7 +123,7 @@ nav a {
   font-size: 13px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #e93b4b;
+  color: #df091f;
 }
 
 nav a span {
@@ -140,7 +141,10 @@ nav a span {
   height: 100%;
   min-height: 100%;
   padding: 20px;
-  background: #0a0a0a;
+  /* background: #202020; */
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  background-color: #e9defa;
+  background-repeat: no-repeat;
 }
 
 .sidebar-info-box {
@@ -154,7 +158,7 @@ nav a span {
 .sidebar .thumbnail {
   width: 100%;
   max-width: 250px;
-  /* border: 4px solid #fff; */
+  border: 4px solid #fefaf6;
   border-radius: 50%;
 }
 
@@ -163,15 +167,15 @@ nav a span {
 }
 
 .sidebar h5 {
-  color: #e93b4b;
+  color: #df091f;
   margin: 0 auto 0.5rem;
 }
 
 .sidebar p {
   text-rendering: optimizeLegibility;
   line-height: 1.6;
-  font-size: 14px;
-  color: #999;
+  font-size: 16px;
+  color: rgb(113, 112, 112);
 }
 
 .sidebar a {
@@ -180,7 +184,7 @@ nav a span {
   font-size: 13px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #e93b4b;
+  color: #df091f;
 }
 
 .header {
@@ -232,7 +236,7 @@ nav a span {
 
 .portfolio-intro h1 {
   font-size: 1.5rem;
-  color: #0a0a0a;
+  color: #28282b;
   margin: 0 auto 8px;
 }
 
@@ -250,7 +254,7 @@ nav a span {
   font-size: 13px;
   letter-spacing: 2.25px;
   text-transform: uppercase;
-  color: #222;
+  color: #28282b;
   margin: 0 auto 8px;
 }
 
@@ -261,7 +265,8 @@ nav a span {
 .cell img {
   width: 100%;
   min-width: 100px;
-  border: 4px solid #fff;
+  border: 4px solid;
+  border-image: linear-gradient(to right, #e9defa 0%, #fbfcdb 100%) 1;
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
 }
 
@@ -274,7 +279,7 @@ nav a span {
 }
 
 .about-bio p {
-  font-size: 15px;
+  font-size: 18px;
   padding-top: 10px;
 }
 
@@ -286,7 +291,8 @@ nav a span {
   width: 100%;
   max-width: 1065px;
   margin-bottom: 15px;
-  border: 4px solid #fff;
+  border: 4px solid;
+  border-image: linear-gradient(to right, #e9defa 0%, #fbfcdb 100%) 1;
   box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
 }
 
